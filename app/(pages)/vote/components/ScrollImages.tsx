@@ -9,7 +9,7 @@ type Props = {
 
 const ScrollImages = (props: Props) => {
   const { toast } = useToast(); // Custom toast hook
-  const [dropdownValues, setDropDownValues] = useState<AddsData[] | []>([]);
+  const [dropdownValues, setDropDownValues] = useState<any>([]);
 
   useEffect(() => {
   getAdds(props?.city)
@@ -22,11 +22,11 @@ const ScrollImages = (props: Props) => {
   // .finally(() => setIsCitiesLoading(false));
 }, []);
 
-const filteredResults = dropdownValues.filter((item) => item.addtype === "TOP");
+const filteredResults = dropdownValues.filter((item:any) => item.addtype === "TOP");
   return (
     <div className='overflow-x-scroll overflow-y-hidden rounded-md no-scrollbar scroll flex flex-row flex-nowrap p-[10px]'>
       <div className='flex space-x-6'>
-        {filteredResults?.map((_, index) => (
+        {filteredResults?.map((_:any, index:number) => (
           <img
             key={index}
             src={_?.addimg}
