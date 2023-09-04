@@ -3,3 +3,7 @@ type CityData = {
     cityname: string;
     votes: number;
   };
+
+  type votesData = {
+    votes:number
+  }

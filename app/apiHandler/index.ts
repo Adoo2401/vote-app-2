@@ -79,7 +79,7 @@ export const getAdds = async (city: string) => {
       }
 
       // Parse the response JSON into an array of CityData objects
-      const adds: AddsData[] = await res.json();
+      const adds: any = await res.json();
 
       // Return the fetched city data
       return adds;

@@ -22,10 +22,10 @@ const Options = (props: Props) => {
                    <Badge onClick={() => props.handleNumberSelect(index+1)} key={index+1} className='cursor-pointer' variant={props.selectedNumber == index+1 ? "default" : "secondary"}>{index + 1}</Badge>
 
                 ))} */}
-                   {props?.votes?.map((e, index) => (
+                   {props?.votes?.map((e:any, index:number) => (
                    <Badge onClick={() => props.handleNumberSelect(e)} key={index} className='cursor-pointer' variant={props.selectedNumber == '_'? "default" : "secondary"}>{e?.name} : {e?.votes}</Badge>
 
-                ))}
+                ))} 
             </div>
             <Button className={cn("flex-[0.3] w-[30%] mx-auto mt-10", theme == "light" && "bg-[#F1F0E8] text-black hover:opacity-20 hover:bg-[#F1F0E8] transition hover:text-black px-3")} size={"sm"}>Fetch Votes</Button>
         </div>

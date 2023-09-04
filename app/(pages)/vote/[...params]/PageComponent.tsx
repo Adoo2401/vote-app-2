@@ -25,7 +25,7 @@ const PageComponent = (props: Props) => {
     const [selectedNumber, setSelectedNumber] = useState<null | number>(null);
     const city = decodeURIComponent(props.city);
     const [dropdownValues, setDropDownValues] = useState<votesData[] | []>([]);
-    console.log(city, ' in page component')
+   
 
 
     const handleNumberSelect = (number: any) => {
