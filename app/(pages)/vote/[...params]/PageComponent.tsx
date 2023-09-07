@@ -71,7 +71,7 @@ const PageComponent = (props: Props) => {
                         <Button className={cn("flex-[0.4]", theme == "light" && "bg-[#F1F0E8] text-black hover:opacity-20 hover:bg-[#F1F0E8] transition hover:text-black")}>Button</Button>
                     </Link>
 
-                    <Options votes={dropdownValues} handleNumberSelect={handleNumberSelect} selectedNumber={selectedNumber} />
+                    <Options votes={dropdownValues} setVotes={setDropDownValues} handleNumberSelect={handleNumberSelect} selectedNumber={selectedNumber} />
                     <BottomImages city={city}/>
                     <DatePicker city={city} />
                 </Card>
